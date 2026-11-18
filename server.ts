@@ -103,6 +103,9 @@ export function createApp(options?: { dbPath?: string }) {
   return app;
 }
 
+const app = createApp();
+export default app;
+
 const isDirectRun =
   process.argv[1] &&
   (path.resolve(process.argv[1]) === fileURLToPath(import.meta.url) ||
@@ -110,7 +113,6 @@ const isDirectRun =
     process.argv[1].endsWith('server.js'));
 
 if (isDirectRun && process.env.NODE_ENV !== 'test') {
-  const app = createApp();
   app.listen(config.port, '0.0.0.0', () => {
     console.log(`Local Service Finder running at http://0.0.0.0:${config.port}`);
   });
