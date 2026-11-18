@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Moderation Console — Local Service Finder</title>
+    <meta name="description" content="Verify local service providers, moderate customer reviews, and oversee user accounts." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main>
+      <div class="container">
+        <div class="dashboard-layout">
+          <aside class="dashboard-sidebar" aria-label="Admin navigation">
+            <div style="margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border);">
+              <strong id="admin-user-name">Moderation Console</strong>
+              <div class="muted" style="font-size:0.75rem;margin-top:2px;">Platform Administration</div>
+            </div>
+            <nav class="tab-list" id="admin-tabs">
+              <button type="button" class="tab-btn active" data-tab="overview">Platform Overview</button>
+              <button type="button" class="tab-btn" data-tab="verifications">Provider Verification <span id="a-count-pending" class="mono">0</span></button>
+              <button type="button" class="tab-btn" data-tab="reviews">Review Moderation <span id="a-count-reviews" class="mono">0</span></button>
+              <button type="button" class="tab-btn" data-tab="users">User Directory <span id="a-count-users" class="mono">0</span></button>
+            </nav>
+          </aside>
+
+          <section id="admin-panel" aria-live="polite">
+            <div class="skeleton" style="height:280px;"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/js/admin-dashboard.js"></script>
+  </body>
+</html>

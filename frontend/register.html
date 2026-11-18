@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register — Local Service Finder</title>
+    <meta name="description" content="Create a customer or service provider account on Local Service Finder." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main>
+      <div class="container">
+        <div class="auth-shell" style="max-width:560px;">
+          <div class="card">
+            <h1 style="font-size:1.625rem;">Create an account</h1>
+            <p class="muted" style="margin-top:6px;font-size:0.875rem;">Choose whether you are booking local services or listing a trade business.</p>
+
+            <div class="segmented-tabs" style="margin-top:18px;width:100%;display:grid;grid-template-columns:1fr 1fr;">
+              <button type="button" class="segmented-btn active" data-role-tab="CUSTOMER">Customer Account</button>
+              <button type="button" class="segmented-btn" data-role-tab="PROVIDER">Service Provider</button>
+            </div>
+
+            <form id="register-form" style="display:flex;flex-direction:column;gap:14px;margin-top:20px;" novalidate>
+              <input type="hidden" id="reg-role" value="CUSTOMER" />
+
+              <div class="grid-2" style="gap:12px;">
+                <div class="form-group">
+                  <label for="reg-name" class="form-label">Full Name</label>
+                  <input id="reg-name" type="text" class="input" placeholder="e.g. Aarav Verma" required />
+                </div>
+                <div class="form-group">
+                  <label for="reg-phone" class="form-label">Indian Mobile (+91)</label>
+                  <input id="reg-phone" type="tel" class="input" placeholder="+91 98450 12345" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reg-email" class="form-label">Email Address</label>
+                <input id="reg-email" type="email" class="input" placeholder="you@example.in" required />
+              </div>
+
+              <div class="grid-2" style="gap:12px;">
+                <div class="form-group">
+                  <label for="reg-city" class="form-label">City</label>
+                  <select id="reg-city" class="select">
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Delhi NCR">Delhi NCR</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Chennai">Chennai</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="reg-area" class="form-label">Locality / Area</label>
+                  <input id="reg-area" type="text" class="input" placeholder="e.g. Indiranagar" />
+                </div>
+              </div>
+
+              <div id="provider-extra-fields" style="display:none;flex-direction:column;gap:14px;padding-top:10px;border-top:1px solid var(--border);">
+                <div class="form-group">
+                  <label for="reg-business" class="form-label">Business / Trade Name</label>
+                  <input id="reg-business" type="text" class="input" placeholder="e.g. Verma Electrical Works" />
+                </div>
+                <div class="grid-2" style="gap:12px;">
+                  <div class="form-group">
+                    <label for="reg-category" class="form-label">Primary Category</label>
+                    <select id="reg-category" class="select"></select>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-pincode" class="form-label">Base 6-Digit Pincode</label>
+                    <input id="reg-pincode" type="text" maxlength="6" class="input mono" placeholder="560038" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="reg-description" class="form-label">Business Overview</label>
+                  <textarea id="reg-description" class="textarea" placeholder="Summarize your experience, specializations, and coverage areas..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reg-password" class="form-label">Password (min 6 characters)</label>
+                <input id="reg-password" type="password" class="input" placeholder="Create a secure password" required />
+              </div>
+
+              <div id="register-error" class="alert-banner alert-error" style="display:none;"></div>
+
+              <button type="submit" id="register-submit-btn" class="btn btn-primary">Create Account</button>
+            </form>
+
+            <p class="muted" style="margin-top:16px;font-size:0.875rem;text-align:center;">
+              Already registered? <a href="/login.html" style="color:var(--accent-primary);font-weight:600;">Log in here</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/js/auth-pages.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Provider Studio — Local Service Finder</title>
+    <meta name="description" content="Manage incoming bookings, quote requests, INR service catalog, weekly availability, and customer reviews." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main>
+      <div class="container">
+        <div class="dashboard-layout">
+          <aside class="dashboard-sidebar" aria-label="Provider dashboard navigation">
+            <div style="margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border);">
+              <strong id="prov-biz-name">Loading...</strong>
+              <div id="prov-biz-meta" class="muted" style="font-size:0.75rem;margin-top:2px;">Provider Studio</div>
+            </div>
+            <nav class="tab-list" id="provider-tabs">
+              <button type="button" class="tab-btn active" data-tab="overview">Overview &amp; Stats</button>
+              <button type="button" class="tab-btn" data-tab="bookings">Bookings <span id="p-count-bookings" class="mono">0</span></button>
+              <button type="button" class="tab-btn" data-tab="quotes">Quote Requests <span id="p-count-quotes" class="mono">0</span></button>
+              <button type="button" class="tab-btn" data-tab="services">Services &amp; Rates <span id="p-count-services" class="mono">0</span></button>
+              <button type="button" class="tab-btn" data-tab="availability">Availability</button>
+              <button type="button" class="tab-btn" data-tab="reviews">Reviews <span id="p-count-reviews" class="mono">0</span></button>
+              <button type="button" class="tab-btn" data-tab="messages">Messages <span id="p-count-messages" class="mono">0</span></button>
+              <button type="button" class="tab-btn" data-tab="profile">Business Profile</button>
+            </nav>
+          </aside>
+
+          <section id="provider-panel" aria-live="polite">
+            <div class="skeleton" style="height:280px;"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/js/provider-dashboard.js"></script>
+  </body>
+</html>

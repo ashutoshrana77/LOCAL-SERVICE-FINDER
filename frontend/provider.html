@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Provider Profile — Local Service Finder</title>
+    <meta name="description" content="Inspect provider credentials, itemized INR rate card, weekly availability, service areas, and verified customer reviews." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main>
+      <div class="container" style="padding-top:24px;">
+        <div class="meta-line" style="margin-bottom:16px;">
+          <a href="/search.html" class="nav-link" style="padding:0;">Search Providers</a>
+          <span class="meta-sep">/</span>
+          <span id="breadcrumb-name">Provider Profile</span>
+        </div>
+
+        <div id="provider-root">
+          <div class="skeleton" style="height:160px;margin-bottom:24px;"></div>
+          <div class="profile-layout">
+            <div style="display:flex;flex-direction:column;gap:20px;">
+              <div class="skeleton" style="height:240px;"></div>
+              <div class="skeleton" style="height:260px;"></div>
+            </div>
+            <div class="skeleton" style="height:380px;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/js/provider.js"></script>
+  </body>
+</html>

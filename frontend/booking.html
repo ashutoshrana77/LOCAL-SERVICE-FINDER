@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Service — Local Service Finder</title>
+    <meta name="description" content="Complete your multi-step service booking with transparent INR pricing and slot selection." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main>
+      <div class="container">
+        <div class="booking-shell">
+          <div style="margin-bottom:20px;">
+            <h1 style="font-size:1.75rem;">Schedule Service Booking</h1>
+            <p id="booking-provider-subtitle" class="muted" style="margin-top:6px;">Loading provider details...</p>
+          </div>
+
+          <div id="stepper-bar" class="stepper-bar" aria-label="Booking progress">
+            <div class="stepper-step active" data-step="1">1. Service</div>
+            <div class="stepper-step" data-step="2">2. Date &amp; Slot</div>
+            <div class="stepper-step" data-step="3">3. Job Details</div>
+            <div class="stepper-step" data-step="4">4. Review</div>
+            <div class="stepper-step" data-step="5">5. Confirmed</div>
+          </div>
+
+          <div id="booking-card" class="card">
+            <div class="skeleton" style="height:260px;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/js/booking.js"></script>
+  </body>
+</html>

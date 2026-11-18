@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Professional — Local Service Finder</title>
+    <meta name="description" content="Filter verified Indian service providers by trade, city, area, pincode, minimum rating, INR price range, and availability." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main>
+      <div class="container">
+        <div class="search-layout">
+          <aside class="filter-rail" aria-label="Search filters">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <h2 style="font-size:1.0625rem;">Filters</h2>
+              <button type="button" id="reset-filters-btn" class="btn btn-ghost btn-sm">Reset</button>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-q" class="form-label">Keyword</label>
+              <input id="filter-q" type="search" class="input" placeholder="e.g. leak, MCB, foam-jet" />
+            </div>
+
+            <div class="form-group">
+              <label for="filter-category" class="form-label">Service Category</label>
+              <select id="filter-category" class="select">
+                <option value="">All Categories</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-location" class="form-label">City, Area, or Pincode</label>
+              <input id="filter-location" type="text" class="input" placeholder="Bengaluru, 400050, Saket..." list="search-city-list" />
+              <datalist id="search-city-list">
+                <option value="Bengaluru"></option>
+                <option value="Mumbai"></option>
+                <option value="Pune"></option>
+                <option value="Delhi NCR"></option>
+                <option value="Hyderabad"></option>
+                <option value="Chennai"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-radius" class="form-label">Distance Radius</label>
+              <select id="filter-radius" class="select">
+                <option value="">Any distance</option>
+                <option value="5">Within 5 km of city center</option>
+                <option value="10">Within 10 km</option>
+                <option value="20">Within 20 km</option>
+                <option value="35">Within 35 km</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-rating" class="form-label">Minimum Rating</label>
+              <select id="filter-rating" class="select">
+                <option value="">Any rating</option>
+                <option value="4.5">4.5 stars &amp; up</option>
+                <option value="4">4.0 stars &amp; up</option>
+                <option value="3.5">3.5 stars &amp; up</option>
+              </select>
+            </div>
+
+            <div class="grid-2" style="gap:10px;">
+              <div class="form-group">
+                <label for="filter-min-price" class="form-label">Min (₹)</label>
+                <input id="filter-min-price" type="number" min="0" step="100" class="input tabular" placeholder="0" />
+              </div>
+              <div class="form-group">
+                <label for="filter-max-price" class="form-label">Max (₹)</label>
+                <input id="filter-max-price" type="number" min="0" step="100" class="input tabular" placeholder="5000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-availability" class="form-label">Availability</label>
+              <select id="filter-availability" class="select">
+                <option value="">Anytime</option>
+                <option value="today">Available Today</option>
+                <option value="week">This Week</option>
+                <option value="weekends">Weekends</option>
+              </select>
+            </div>
+
+            <label class="checkbox-row">
+              <input id="filter-verified" type="checkbox" />
+              <span>Verified providers only</span>
+            </label>
+          </aside>
+
+          <section aria-label="Search results">
+            <div class="search-results-toolbar">
+              <div>
+                <h1 style="font-size:1.5rem;">Local Service Providers</h1>
+                <p id="results-summary" class="muted" style="font-size:0.875rem;margin-top:4px;">Loading providers...</p>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <label for="filter-sort" class="form-label" style="white-space:nowrap;">Sort by</label>
+                <select id="filter-sort" class="select" style="width:auto;min-width:170px;">
+                  <option value="relevance">Relevance</option>
+                  <option value="rating">Highest Rating</option>
+                  <option value="price_asc">Price: Low to High</option>
+                  <option value="price_desc">Price: High to Low</option>
+                  <option value="response_time">Fastest Response</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="results-grid" class="grid-2"></div>
+            <div id="results-pagination" class="pagination" style="display:none;"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/js/search.js"></script>
+  </body>
+</html>

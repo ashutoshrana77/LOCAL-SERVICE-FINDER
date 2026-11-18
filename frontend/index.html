@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Service Finder — Verified Home &amp; Trade Professionals Across India</title>
+    <meta name="description" content="Discover, compare, and book trusted local plumbers, electricians, AC technicians, carpenters, and home service specialists across Indian cities with upfront INR rate cards." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="hero-kicker">Verified Local Trades · Bengaluru · Mumbai · Pune · Delhi NCR · Hyderabad · Chennai</div>
+              <h1>Find vetted home and repair professionals near your pincode.</h1>
+              <p class="hero-lead">
+                Compare verified local specialists by transparent INR rate cards, response speed, and neighborhood reviews—then request a custom quote or book a confirmed slot in minutes.
+              </p>
+
+              <form id="hero-search-form" class="hero-search-form" aria-label="Search local service providers">
+                <div class="form-group">
+                  <label for="hero-location" class="sr-only">City, area, or pincode</label>
+                  <input id="hero-location" name="location" type="text" class="input" placeholder="City, area, or pincode (e.g. Indiranagar, 560038)" list="city-suggestions" />
+                  <datalist id="city-suggestions">
+                    <option value="Bengaluru"></option>
+                    <option value="Mumbai"></option>
+                    <option value="Pune"></option>
+                    <option value="Delhi NCR"></option>
+                    <option value="Hyderabad"></option>
+                    <option value="Chennai"></option>
+                  </datalist>
+                </div>
+                <div class="form-group">
+                  <label for="hero-category" class="sr-only">Service category</label>
+                  <select id="hero-category" name="category" class="select">
+                    <option value="">All Service Categories</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Search Providers</button>
+              </form>
+
+              <div class="meta-line" style="margin-top:4px;">
+                <span>Popular:</span>
+                <a href="/search.html?category=plumbing&location=Bengaluru" class="nav-link" style="padding:0;">Plumbers in Bengaluru</a>
+                <span class="meta-sep">·</span>
+                <a href="/search.html?category=electrical&location=Mumbai" class="nav-link" style="padding:0;">Electricians in Mumbai</a>
+                <span class="meta-sep">·</span>
+                <a href="/search.html?category=ac-repair&location=Pune" class="nav-link" style="padding:0;">AC Repair in Pune</a>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <img src="/src/assets/images/hero_local_craft_1795018254224.jpg" alt="Master Indian plumbing technician inspecting brass fittings at a workbench" referrerpolicy="no-referrer" />
+              <div class="hero-visual-caption">
+                <strong style="font-size:0.9375rem;">Upfront INR Rate Cards &amp; Direct Scheduling</strong>
+                <span class="muted" style="font-size:0.8125rem;">Every listed professional maintains published starting rates and confirmed time slots.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-metrics-strip">
+            <div class="metric-item">
+              <strong id="metric-providers">26+</strong>
+              <span>Active local businesses</span>
+            </div>
+            <div class="metric-item">
+              <strong>12 Trades</strong>
+              <span>Home, appliance &amp; repair categories</span>
+            </div>
+            <div class="metric-item">
+              <strong>6 Metros</strong>
+              <span>Area &amp; pincode-level coverage</span>
+            </div>
+            <div class="metric-item">
+              <strong>15–45 mins</strong>
+              <span>Typical provider response window</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="categories" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Browse by service category</h2>
+              <p class="section-sub">Select a trade to view available professionals, starting prices in INR, and verified customer feedback.</p>
+            </div>
+            <a href="/search.html" class="btn btn-secondary btn-sm">View All Providers</a>
+          </div>
+          <div id="category-tiles" class="category-grid">
+            <div class="skeleton" style="height:104px;"></div>
+            <div class="skeleton" style="height:104px;"></div>
+            <div class="skeleton" style="height:104px;"></div>
+            <div class="skeleton" style="height:104px;"></div>
+            <div class="skeleton" style="height:104px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="section section-bordered">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Featured verified professionals</h2>
+              <p class="section-sub">Top-rated tradespeople verified by our moderation team for consistent arrival times and clear pricing.</p>
+            </div>
+            <a href="/search.html?verifiedOnly=true&sort=rating" class="btn btn-secondary btn-sm">Explore Verified Directory</a>
+          </div>
+          <div id="featured-providers" class="grid-3">
+            <div class="skeleton" style="height:340px;"></div>
+            <div class="skeleton" style="height:340px;"></div>
+            <div class="skeleton" style="height:340px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section section-bordered">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>How Local Service Finder works</h2>
+              <p class="section-sub">A straightforward five-step process from locating a nearby specialist to reviewing completed work.</p>
+            </div>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-num">01</span>
+              <h3>Search</h3>
+              <p class="muted" style="font-size:0.875rem;">Filter by trade, locality or 6-digit pincode, budget range, and today or weekend availability.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-num">02</span>
+              <h3>Compare</h3>
+              <p class="muted" style="font-size:0.875rem;">Inspect itemized INR rate cards, response times, service zones, and verified customer reviews.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-num">03</span>
+              <h3>Request Quote</h3>
+              <p class="muted" style="font-size:0.875rem;">Send custom job specifications for multi-room or complex repairs before committing to a slot.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-num">04</span>
+              <h3>Book</h3>
+              <p class="muted" style="font-size:0.875rem;">Reserve a preferred date and 2-hour arrival window, then track status updates in your dashboard.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-num">05</span>
+              <h3>Review</h3>
+              <p class="muted" style="font-size:0.875rem;">Submit verified ratings after job completion so neighbors can make informed hiring decisions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="trust" class="section section-bordered">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Built for practical local accountability</h2>
+              <p class="section-sub">Every booking, quote, and verification step is logged so both homeowners and tradespeople operate with clarity.</p>
+            </div>
+            <a href="/register.html?role=PROVIDER" class="btn btn-primary btn-sm">List Your Business</a>
+          </div>
+          <div class="grid-4">
+            <div class="surface-panel">
+              <h3>Verified Profiles</h3>
+              <p class="muted" style="margin-top:8px;font-size:0.875rem;">Trade credentials, contact numbers, and service pincodes are reviewed by platform moderators before verification badges are issued.</p>
+            </div>
+            <div class="surface-panel">
+              <h3>Transparent Reviews</h3>
+              <p class="muted" style="margin-top:8px;font-size:0.875rem;">Reviews are tied strictly to completed bookings, with public provider replies for balanced accountability.</p>
+            </div>
+            <div class="surface-panel">
+              <h3>Structured Booking Status</h3>
+              <p class="muted" style="margin-top:8px;font-size:0.875rem;">Track every request from Pending through Accepted, Rescheduled, or Completed with direct message threads.</p>
+            </div>
+            <div class="surface-panel">
+              <h3>Local Support</h3>
+              <p class="muted" style="margin-top:8px;font-size:0.875rem;">Pay directly upon inspection or completion with no hidden platform surcharges on listed INR rates.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/js/home.js"></script>
+  </body>
+</html>

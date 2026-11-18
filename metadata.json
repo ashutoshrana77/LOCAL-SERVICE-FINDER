@@ -1,0 +1,6 @@
+{
+  "name": "Local Service Finder",
+  "description": "Discover, compare, and book trusted local service professionals across Indian cities with transparent INR pricing and dedicated customer, provider, and admin workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
